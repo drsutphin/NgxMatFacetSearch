@@ -25,7 +25,7 @@
             },
             "production": {
               "tsConfig": "projects/ngx-mat-facet-search/tsconfig.lib.prod.json"
-            },
+            }
           },
           "defaultConfiguration": "production"
         },
@@ -123,21 +123,21 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "demo-application:build"
+            "buildTarget": "demo-application:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "demo-application:build:production"
+              "buildTarget": "demo-application:build:production"
             },
             "development": {
-              "browserTarget": "demo-application:build"
+              "buildTarget": "demo-application:build"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "demo-application:build"
+            "buildTarget": "demo-application:build"
           }
         },
         "test": {
@@ -188,6 +188,5 @@
   },
   "cli": {
     "analytics": false
-  },
-  "defaultProject": "ngx-mat-facet-search"
+  }
 }

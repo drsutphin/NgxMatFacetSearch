@@ -4,7 +4,7 @@ import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatCardModule} from '@angular/material/card';
-import {FlexModule} from '@angular/flex-layout';
+// import {FlexModule} from '@angular/flex-layout';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -34,7 +34,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     BrowserAnimationsModule,
     NgxMatFacetSearchModule,
     MatCardModule,
-    FlexModule,
+    // FlexModule,
     MatCheckboxModule,
     MatDividerModule,
     MatToolbarModule,

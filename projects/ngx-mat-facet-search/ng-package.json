@@ -2,10 +2,7 @@
   "$schema": "../../node_modules/ng-packagr/ng-package.schema.json",
   "dest": "../../dist/ngx-mat-facet-search",
   "lib": {
-    "entryFile": "src/public-api.ts",
-    "umdModuleIds": {
-      "uuid": "uuid"
-    }
+    "entryFile": "src/public-api.ts"
   },
   "assets": [
     "_facet-search-theme.scss"

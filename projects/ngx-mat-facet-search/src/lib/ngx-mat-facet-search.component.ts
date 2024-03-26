@@ -143,15 +143,14 @@ export class NgxMatFacetSearchComponent implements OnInit, AfterViewInit {
 
   autoCompleteSelected(event: MatAutocompleteSelectedEvent): void {
     const selectedFacet: Facet = event.option.value;
-    const parentElement = event.option._getHostElement().parentElement;
+    const parentElement = this.filterInput.nativeElement;
 
     if (!!parentElement) {
       const elementRef = parentElement.getBoundingClientRect();
+      const top = elementRef.height - 3;
+      const left = -38;
 
-      const top = elementRef.top - 3;
-      const left = elementRef.left;
-
-      this.facetSelected(selectedFacet, {top, left}, false, event.option._getHostElement());
+      this.facetSelected(selectedFacet, {top, left}, false, this.filterInput);
     }
   }
 
@@ -204,7 +203,6 @@ export class NgxMatFacetSearchComponent implements OnInit, AfterViewInit {
     }
     return false;
   }
-
 
   updateSelectedFacets(): void {
     this.loggingCallback('Updating selected facets:', this.selectedFacets);
@@ -265,6 +263,23 @@ export class NgxMatFacetSearchComponent implements OnInit, AfterViewInit {
   focus(event: MouseEvent) {
     event.stopPropagation();
     this.inputAutoComplete.openPanel();
+  }
+
+  onKeyup(event: KeyboardEvent) {
+    const inputValue = this.filterInput.nativeElement.value;
+    const inputLength = this.filterInput.nativeElement.value.length;
+
+    if (event.code === 'Backspace' && inputLength > 0) {
+      this.filterInput.nativeElement.value = inputValue.substring(0, inputLength - 1);
+
+      const filterText = this.filterInput.nativeElement.value;
+
+      if (!!filterText && filterText.length > 0) {
+        this.filteredFacets = this.availableFacets.filter(f => !!f && !!f.name && f.name.toLowerCase().includes(filterText.toLowerCase()));
+      } else {
+        this.filteredFacets = this.availableFacets;
+      }
+    }
   }
 
   /**

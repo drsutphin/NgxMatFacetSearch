@@ -47,7 +47,7 @@
       <div *ngSwitchCase="data.type === FacetDataType.Typeahead || data.type === FacetDataType.TypeaheadSingle"
            class="typeahead-wrapper">
 
-        <mat-form-field class="typeahead-form-field" appearance="outline" floatLabel="never">
+        <mat-form-field class="typeahead-form-field" appearance="outline" floatLabel="auto">
           <mat-label>Search...</mat-label>
           <input matInput #typeAheadInput
                  autocomplete="off"
@@ -131,7 +131,7 @@
           <input matInput focusOnShow (keydown.enter)="validateAndSubmit()" autocomplete="off"
                  [ngModel]="getValue(data)" (ngModelChange)="setValue(data, $event)"
                  placeholder="{{data.placeholder || data.labelText }}" autofocus/>
-          <button mat-button *ngIf="data.values" matSuffix mat-icon-button aria-label="Clear"
+          <button *ngIf="data.values" matSuffix mat-icon-button aria-label="Clear"
                   (click)="data.values = undefined">
             <mat-icon>close</mat-icon>
           </button>

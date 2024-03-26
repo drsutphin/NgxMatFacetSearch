@@ -13,9 +13,13 @@
     width: 85px;
     font-size: 14px!important;
     font-weight: normal;
-    flex: 0;
-    caret-color: transparent;
+    //flex: 0;
+    //caret-color: transparent;
     text-align: right;
+
+    position: relative;
+    top: -7px;
+    margin-left: 2px;
   }
 }
 
@@ -38,6 +42,10 @@
 
 :host-context(.inlineChipCheckbox) label.mat-checkbox-layout div.mat-checkbox-inner-container {
   transform: scale(.7);
+}
+
+.add-icon {
+  margin-top: 8px;
 }
 
 .add-icon:hover, .filter-input-container:hover {
@@ -69,4 +77,13 @@
 
 .content-wrapper {
   flex: 1;
+}
+
+.flex-facet {
+  display: flex;
+  align-items: center;
+}
+
+.flex-facet-autocomplete {
+  justify-content: center;
 }

@@ -23,7 +23,7 @@
         "dist/ngx-mat-facet-search"
       ]
     },
-    "target": "es2017",
+    "target": "es2022",
     "module": "es2020",
     "lib": [
       "es2018",

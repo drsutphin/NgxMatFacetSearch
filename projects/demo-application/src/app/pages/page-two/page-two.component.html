@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card appearance="outlined">
   <mat-card-content>
     <ngx-mat-facet-search #search [source]="facets" (searchUpdated)="output.filterUpdated($event)" [chipLabelsEnabled]="settings.chipLabelsEnabled"
                           [confirmOnRemove]="settings.confirmOnRemove" [clearButtonEnabled]="settings.clearButtonEnabled" placeholder="Add a filter..." clearButtonText="CLEAR FILTERS">
