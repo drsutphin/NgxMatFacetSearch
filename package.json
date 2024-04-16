@@ -12,7 +12,6 @@
     "e2e": "ng e2e",
     "build-demo": "ng build demo-application --output-path docs --base-href /NgxMatFacetSearch/"
   },
-  "private": true,
   "dependencies": {
     "@angular/animations": "~17.2.2",
     "@angular/cdk": "~17.2.1",
