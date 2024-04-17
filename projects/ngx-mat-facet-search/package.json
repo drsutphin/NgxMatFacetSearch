@@ -1,8 +1,11 @@
 {
-  "name": "ngx-mat-facet-search",
-  "version": "0.7.2",
+  "name": "@drsutphin/ngx-mat-facet-search",
+  "version": "0.7.3",
   "author": "Derek Sutphin",
-  "repository": "https://github.com/drsutphin/NgxMatFacetSearch",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drsutphin/NgxMatFacetSearch.git"
+  },
   "peerDependencies": {
     "@angular/common": "~17.2.2",
     "@angular/core": "~17.2.2",
